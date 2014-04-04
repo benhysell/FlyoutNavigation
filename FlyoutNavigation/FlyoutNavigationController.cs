@@ -246,6 +246,7 @@ namespace FlyoutNavigation
 		{
 			base.ViewDidLayoutSubviews();
 			RectangleF navFrame = View.Bounds;
+		    //var navFrame = UIScreen.MainScreen.Bounds; //xxxx
 //			navFrame.Y += UIApplication.SharedApplication.StatusBarFrame.Height;
 //			navFrame.Height -= navFrame.Y;
 			//this.statusbar
@@ -349,6 +350,7 @@ namespace FlyoutNavigation
 			}
 			CurrentViewController = ViewControllers[SelectedIndex];
 			RectangleF frame = View.Bounds;
+		    //var frame = UIScreen.MainScreen.Bounds; //xxx
 			if (isOpen || ShouldStayOpen)
 				frame.X = Position == FlyOutNavigationPosition.Left ? menuWidth : -menuWidth;
 
@@ -402,6 +404,7 @@ namespace FlyoutNavigation
 		void setViewSize()
 		{
 			RectangleF frame = View.Bounds;
+		   //var frame = UIScreen.MainScreen.Bounds; //xxx
 			//frame.Location = PointF.Empty;
 			if (ShouldStayOpen)
 				frame.Width -= menuWidth;
